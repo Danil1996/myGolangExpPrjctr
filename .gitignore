@@ -1,0 +1,8 @@
+etc/
+.env
+todo
+.idea
+*.log
+*.zip
+*.DS_Store
+env-vars*
