@@ -1,3 +1,3 @@
-module structs
+module github.com/myGolangExpPrjctr
 
-go 1.21.0
+go 1.19
