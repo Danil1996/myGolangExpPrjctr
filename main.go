@@ -1,14 +1,12 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/myGolangExpPrjctr/zoo"
+	controlFlow "github.com/myGolangExpPrjctr/control_flow"
 )
 
 // TODO: just run it
 func main() {
-	zooStoryManager := zoo.ZooStoryManager{}
-
-	fmt.Println(zooStoryManager.TellStory())
+	you := controlFlow.Character{}
+	quest := controlFlow.Quest{}
+	quest.StartGame(you)
 }
