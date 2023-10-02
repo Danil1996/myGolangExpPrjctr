@@ -2,6 +2,7 @@ etc/
 .env
 todo
 .idea
+.vscode
 *.log
 *.zip
 *.DS_Store
