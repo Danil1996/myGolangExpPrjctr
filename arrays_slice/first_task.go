@@ -1,4 +1,4 @@
-package arrays_lice
+package arrays_slice
 
 import (
 	"fmt"
@@ -32,7 +32,7 @@ func (userText *UserText) FindSubstringInInputs(substring string) {
 			sliceOfMatches = append(sliceOfMatches, string)
 		}
 	}
-	fmt.Printf("%v\n", sliceOfMatches)
+	fmt.Printf("\n---- I found your substring \"%v\" in %v user inputs, here it's : %v ----", substring, len(sliceOfMatches), sliceOfMatches)
 }
 
 func containsNonEnglishCharacters(input string) bool {
