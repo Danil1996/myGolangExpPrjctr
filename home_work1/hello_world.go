@@ -1,4 +1,4 @@
-package hello_world
+package home_work1
 
 import "fmt"
 

@@ -1,4 +1,4 @@
-package arrays_slice
+package home_work4
 
 type TeachersJournalWithParallelAssessment struct {
 	GradesOf9V        []float32

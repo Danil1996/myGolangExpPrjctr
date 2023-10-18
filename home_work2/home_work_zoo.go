@@ -1,4 +1,4 @@
-package zoo
+package home_work2
 
 import "fmt"
 

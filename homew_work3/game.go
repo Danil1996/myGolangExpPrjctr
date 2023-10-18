@@ -1,4 +1,4 @@
-package controlFlow
+package home_work3
 
 import (
 	"fmt"

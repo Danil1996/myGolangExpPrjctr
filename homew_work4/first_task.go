@@ -1,4 +1,4 @@
-package arrays_slice
+package home_work4
 
 import (
 	"fmt"

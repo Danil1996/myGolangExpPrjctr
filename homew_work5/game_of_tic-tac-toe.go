@@ -1,4 +1,4 @@
-package maps
+package home_work5
 
 import "fmt"
 
