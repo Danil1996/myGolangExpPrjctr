@@ -2,7 +2,6 @@ package home_work6_2
 
 import "fmt"
 
-// Клас "Маршрут"
 type Route struct {
 	TransportList []Transport
 }

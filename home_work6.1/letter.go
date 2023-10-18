@@ -2,7 +2,6 @@ package home_work6
 
 import "fmt"
 
-// Створення структури "Конверт", яка реалізує інтерфейс "Посилка"
 type Letter struct {
 	Sender    string
 	Recipient string

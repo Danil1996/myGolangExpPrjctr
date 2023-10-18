@@ -2,7 +2,6 @@ package home_work6_2
 
 import "fmt"
 
-// Клас "Автомобіль"
 type Car struct {
 	Speed int
 }
