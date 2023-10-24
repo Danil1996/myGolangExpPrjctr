@@ -2,7 +2,6 @@ package home_work5
 
 import "fmt"
 
-// Тип для представлення ігрового поля
 type GameBoard map[int]string
 
 type TicCatToe struct{}
