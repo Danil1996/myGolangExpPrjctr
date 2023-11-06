@@ -3,10 +3,9 @@ package home_work7
 import (
 	"fmt"
 	"math/rand"
+	"sync"
 	"time"
 )
-
-//  Яка створює 2 горутини. Перша горутина генерує випадкові числа в заданому діапазоні й надсилає їх через канал у другу горутину. Друга горутина отримує випадкові числа і знаходить найбільше й найменше число, після чого надсилає його назад у першу горутину через канал. Перша горутина виводить найбільше й найменше числа на екран.
 
 func SecondTaskRun() {
 	rand.Seed(time.Now().UnixNano())
@@ -16,15 +15,25 @@ func SecondTaskRun() {
 		min, max int
 	})
 
+	wg := sync.WaitGroup{}
+
+	wg.Add(2)
+
 	go func() {
+		defer wg.Done()
 		for i := 0; i < 10; i++ {
 			randomNumber := rand.Intn(100)
 			randomNumbers <- randomNumber
 		}
 		close(randomNumbers)
+
+		someValue := <-extremes
+		fmt.Printf("Min number: %d\n", someValue.min)
+		fmt.Printf("Max number: %d\n", someValue.max)
 	}()
 
 	go func() {
+		defer wg.Done()
 		min := 100
 		max := 0
 
@@ -43,7 +52,5 @@ func SecondTaskRun() {
 		close(extremes)
 	}()
 
-	extremeValues := <-extremes
-	fmt.Printf("Min number: %d\n", extremeValues.min)
-	fmt.Printf("Max number: %d\n", extremeValues.max)
+	wg.Wait()
 }
